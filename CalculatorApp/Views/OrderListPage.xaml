@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculatorApp.Views.OrderListPage"
+             Title="Orders">
+    <Grid VerticalOptions="FillAndExpand"
+          BackgroundColor="#f0f0f0">
+        <!--Grid settings-->
+        <Grid.RowDefinitions>
+            <!--
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            -->
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+
+        </Grid.RowDefinitions>
+        <!--1
+        <StackLayout Orientation="Vertical">
+            <Image Source="SoftinnLogoGreen.png"
+                   Aspect="Fill"
+                   BackgroundColor="White"
+                   HeightRequest="170"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center" />
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Fill"
+                         VerticalOptions="Start"
+                         BackgroundColor="#8ed444"
+                         Padding="20,10,20,10"
+                         Margin="0,-6,0,0">
+                <ImageButton Source="menu.png"
+                             WidthRequest="30"
+                             HeightRequest="30"
+                             HorizontalOptions="Start"
+                             VerticalOptions="Center"
+                             BackgroundColor="#8ed444" />
+                <ImageButton Source="settings.png"
+                             WidthRequest="30"
+                             HeightRequest="30"
+                             BackgroundColor="#8ed444"
+                             HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="CenterAndExpand"
+                             Margin="160,0,0,0" />
+                <ImageButton Source="userIcon.png"
+                             WidthRequest="30"
+                             BackgroundColor="#8ed444"
+                             CornerRadius="10"
+                             HeightRequest="30"
+                             HorizontalOptions="End"
+                             VerticalOptions="Center" />
+            </StackLayout>
+        </StackLayout>
+        -->
+
+        <!--2-->
+        <Frame Grid.Row="0"
+               BackgroundColor="#f0f0f0"
+               Margin="0,0,0,0">
+            <Label Text="Bookings"
+                   FontAttributes="Bold"
+                   FontSize="40"
+                   TextDecorations="Underline"
+                   Margin="0,0,0,0" />
+        </Frame>
+        <!--3-->
+        <ListView x:Name="BookingList"
+                  BackgroundColor="#f0f0f0"
+                  Grid.Row="1"
+                  HeightRequest="410"
+                  ItemsSource="{Binding Bookings}"
+                  Margin="10,0"
+                  VerticalOptions="Start"
+                  HorizontalOptions="CenterAndExpand">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame BackgroundColor="#f0f0f0"
+                               BorderColor="#cccccc"
+                               Padding="5"
+                               Margin="0,5,0,5"
+                               HasShadow="True">
+                            <Grid HeightRequest="100"
+                                  HorizontalOptions="FillAndExpand"
+                                  VerticalOptions="Start">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Property}"
+                                           TextColor="#757575"
+                                           FontSize="12"
+                                           VerticalOptions="Center"
+                                           Margin="20,0" />
+                                    <Label Grid.Column="1"
+                                           Text="{Binding Type}"
+                                           VerticalOptions="CenterAndExpand"
+                                           WidthRequest="30"
+                                           Margin="0,0,20,0" />
+                                    <Label Text="{Binding Duration}"
+                                           Grid.Column="2"
+                                           TextColor="Black"
+                                           FontAttributes="Bold"
+                                           Margin="0,0,10,0"
+                                           VerticalOptions="CenterAndExpand" />
+                                    <Label Text="{Binding Total}"
+                                           Grid.Column="3"
+                                           TextColor="Black"
+                                           FontSize="15"
+                                           VerticalOptions="Center" />
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+        <!--4-->
+        <Frame Grid.Row="2"
+               HeightRequest="100"
+               BackgroundColor="#f0f0f0"
+               Margin="0,0,0,0">
+            <Button CornerRadius="20"
+                    HeightRequest="100"
+                    Text="Create Booking"
+                    TextColor="White"
+                    BackgroundColor="#8ed444"
+                    FontAttributes="Bold"
+                    FontSize="30">
+            </Button>
+        </Frame>
+    </Grid>
+</ContentPage>

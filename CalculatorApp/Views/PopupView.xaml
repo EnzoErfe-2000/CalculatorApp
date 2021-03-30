@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rg:PopupPage  
+             xmlns:rg="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+              x:Class="CalculatorApp.Views.PopupView">
+  <Grid
+      HeightRequest="265"
+      VerticalOptions="End">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+      <Frame
+          Grid.RowSpan="2"
+          HeightRequest="225"
+          VerticalOptions="End"
+          CornerRadius="30"
+          Padding="0"
+               BackgroundColor="#8ed444">
+            <Grid 
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand">
+                
+                <Image Source="https://pbs.twimg.com/media/ExNObqrVgAQjhLk.jpg:large"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Aspect="Fill"
+                       BackgroundColor="White"
+                       Opacity="1"/>
+                <yummy:PancakeView BackgroundColor="#8ed444"
+                                   CornerRadius="20,20,0,0"
+                                   IsClippedToBounds="true"
+                                   HorizontalOptions="End"
+                                   VerticalOptions="End"
+                                   Margin="0,0"
+                                   Padding="10,0,0,0">
+                    <Label Text="Order Processed!"
+                       HorizontalOptions="End"
+                       VerticalOptions="End"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       Margin="0,0,10,5"
+                       />
+                    
+                </yummy:PancakeView>
+                <Label Text="(View at Order List)" 
+                       TextColor="White"
+                       FontSize="Small"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="End"
+                       VerticalTextAlignment="End"
+                       Margin="0,0,10,-7"/>
+                <Button Grid.Row="1"
+                        Text="PRESS TO CONTINUE"
+                        TextColor="White"
+                        HeightRequest="55"
+                        BackgroundColor="#8ed444"
+                        Clicked="Button_Clicked" />
+            </Grid>
+      </Frame>
+  </Grid>
+</rg:PopupPage>

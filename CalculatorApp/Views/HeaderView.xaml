@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculatorApp.Views.HeaderView">
+  <ContentView.Content>
+        <Grid BackgroundColor="White"
+              HeightRequest="150"
+              >
+            <Image 
+                   Source="SoftinnLogoGreen.png"
+                   Opacity="1" />
+            <Label Text="Make IT easy for hotels"
+                   TextColor="#4e8217"
+                   Margin="0,0,0,10"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   VerticalOptions="End"
+                   Opacity="1"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>
