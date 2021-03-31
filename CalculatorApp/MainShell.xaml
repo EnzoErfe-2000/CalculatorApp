@@ -73,13 +73,15 @@
         <pages:HeaderView />
     </Shell.FlyoutHeader>
     
-    <FlyoutItem Title="Calculator" 
-                Route="CalculatorPage">
+    <FlyoutItem Title="Calculator"
+                Route="CalculatorPage"
+                Icon="icon_about.png">
         <ShellContent ContentTemplate="{DataTemplate pages:CalculatorPage}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Order List"
-                Route="OrderListPage">
+                Route="OrderListPage"
+                Icon="icon_feed.png">
         <ShellContent ContentTemplate="{DataTemplate pages:OrderListPage}" />
     </FlyoutItem>
     

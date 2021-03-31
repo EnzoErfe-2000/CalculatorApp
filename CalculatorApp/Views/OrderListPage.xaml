@@ -132,7 +132,8 @@
                     TextColor="White"
                     BackgroundColor="#8ed444"
                     FontAttributes="Bold"
-                    FontSize="30">
+                    FontSize="30"
+                    Clicked="GoToCalcPage">
             </Button>
         </Frame>
     </Grid>
